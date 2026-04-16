@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti ❤️</title>
+<style>
+       
+   body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+    
+    h1 {
+        font-size: 40px;
+        animation: latido 1s infinite;
+    }
+    p {
+        font-size: 20px;
+    }
+    @keyframes latido {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+</style>
+</head>
+<body>
+
+<h1>❤️ DIANA ALEJANDRA ❤️</h1>
+<p id="mensaje"></p>
+
+<audio controls autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let texto = "Preciosaaaaaa,\n\nNo soy de esos que hablan bonito ni que buscan las palabras perfectas, pero soy todo un caballero de botas y sombrero como me enseñó mi abuelo.\n\nContigo no sé qué me pasa, que últimamente pienso mucho en ti, que hasta a mis amigos les hablo de ti.\n\nSi mi vida fuera un circuito, tú serías esa corriente que nunca para. La que quema. La que no se desconecta aunque uno quiera.\n\nApareciste cuando todo estaba por venirse abajo, de la nada, como algo que no estaba en ningún cálculo, y sin embargo lo cambió todo… todo, en un segundo.\n\nMe atraes como un campo magnético, sin pedirme permiso, sin avisarme. Y yo aquí, sin defensa, tragado de ti… de tu mirada encantadora.\n\nMi gomela linda, caprichosa, mi tentación de todos los días. Cada día que pasa te veo más bonita y empiezo a preguntarme qué pasó con el perro enamorado que era yo.\n\nMe enloquece tu sonrisa. Me enloquece cómo me miras. Me enloquece tenerte cerca… cuando estás a mi lado la razón simplemente se va, y solo quedan las ganas.\n\nY hay una parte mía que te quiere sin control. Que no quiere portarse bien. Que te quiere cerquita, pegadita, sin espacio entre los dos.\n\nQuiero perderme en ti, despacio, pero con todo. Recorrerte sin prisa y sin pausa. Sentirte cerca y que el mundo deje de importar.\n\nPorque esto no es solo amor, mi vida… esto es fuego. Son ganas que no se apagan, que me consumen y me piden más. Eres mi vicio más bonito, mi debilidad favorita.\n\nNo te voy a prometer un cuento de hadas, pero sí algo real… algo sincero.\n\nTe pienso de día, te pienso de noche, te deseo a cada rato.\n\nY si de algo estoy seguro… completamente seguro… es que te elegiría otra vez, y otra, y todas las veces que hagan falta.\n\nNo solo para quererte, sino para hacerte sentir única, para sacarte suspiros y que nunca se te olvide lo que se siente estar entre mis brazos.\n\nPorque entre todo el ruido del mundo… tú eres lo único que tiene sentido.";
+let i = 0;
+
+function escribir() {
+    if (i < texto.length) {
+        document.getElementById("mensaje").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 60);
+    }
+}
+
+escribir();
+</script>
+
+</body>
+<img src="fondo.jpg" style="width: 80%; max-width: 400px; border-radius: 15px; margin-top: 20px;">
